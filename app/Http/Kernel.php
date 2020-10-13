@@ -60,6 +60,14 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'createcategor' => \App\Http\Requests\Request\CreateCategoryRequest::class,
+        'updatecategor' => \App\Http\Requests\Request\UpdateCategoryRequest::class,
+        'createpost' => \App\Http\Requests\post\CreatePostRequest::class,
+        'updatepost' => \App\Http\Requests\post\UpdatePostRequest::class,
+        'updateuser' => \App\Http\Requests\UserUpdateRequest::class,
+        'checkCategoryCount' => \App\Http\Middleware\checkCategoryCount::class,
+        'admin' => \App\Http\Middleware\VerifyisAdmin::class,
+        
     ];
 
     /**
@@ -76,5 +84,6 @@ class Kernel extends HttpKernel
         \Illuminate\Session\Middleware\AuthenticateSession::class,
         \Illuminate\Routing\Middleware\SubstituteBindings::class,
         \Illuminate\Auth\Middleware\Authorize::class,
+        
     ];
 }
