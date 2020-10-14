@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\Blog\PostController;
+use App\Http\Controllers\MyExportImportController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,3 +46,12 @@ Route::middleware(['auth','admin'])->group(function(){
 Auth::routes();
 Route::get('sitemap.xml','SitemapController@index');
 
+
+
+// Export Import Controller
+
+Route::get('importExportView', [ MyExportImportController::class, 'importExportView' ])->name('importExportView');
+
+Route::get('export', [ MyExportImportController::class, 'export' ])->name('export');
+
+Route::post('import', [ MyExportImportController::class, 'import' ])->name('import');

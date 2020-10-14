@@ -91,6 +91,7 @@
                                     <a class="list-group-item list-group-item-action " href="{{ route('post.index') }}">Posts</a>
                                     <a class="list-group-item list-group-item-action" href="{{ route('category.index') }}">Categories</a>
                                     <a class="list-group-item list-group-item-action" href="{{ route('tag.index') }}">Tags</a>
+                                    <a class="list-group-item list-group-item-action" href="{{ route('importExportView') }}">Import Export</a>
                                 </ul>
                             </div>
                         </div>              
